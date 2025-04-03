@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 public class TestParam {
     @ParameterizedTest
-    @CsvSource (value = {"1000,true,100", "100,false,50","110000000, true, 5000"})
+    @CsvSource (value = {"5000,true,250", "5000,false,50","110000000, true, 5000"})
     public void testAllOptions (double ps, boolean st, double ex){
         CashBackService bonusCalc = new CashBackService();
         double actual = bonusCalc.cashBackCalculation(ps,st);
